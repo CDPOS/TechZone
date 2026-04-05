@@ -1,4 +1,4 @@
-/* --- RESET E GERAL --- */
+/* --- GERAL --- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,7 +12,7 @@ body {
     line-height: 1.6;
 }
 
-/* --- HEADER (Visual Original) --- */
+/* --- HEADER --- */
 header { 
     background-color: #020617; 
     padding: 20px 5%; 
@@ -32,7 +32,7 @@ nav a {
 
 nav a:hover { color: #22c55e; }
 
-/* --- BANNER (Verde Sólido 100%) --- */
+/* --- BANNER --- */
 .banner { 
     background-color: #16a34a; 
     padding: 40px 20px; 
@@ -62,7 +62,7 @@ nav a:hover { color: #22c55e; }
     gap: 20px; 
 }
 
-/* --- CARD (Visual Original Ajustado) --- */
+/* --- CARD --- */
 .card { 
     background-color: #0a0f1e; 
     padding: 20px; 
@@ -117,7 +117,7 @@ nav a:hover { color: #22c55e; }
     font-weight: bold;
 }
 
-/* --- FORMULÁRIO DE CONTATO (Correção da Barra e Botão) --- */
+/* --- FORMULÁRIO DE CONTATO --- */
 .container-contato { padding: 40px 5%; }
 
 .formulario { 
@@ -145,7 +145,7 @@ nav a:hover { color: #22c55e; }
     width: 100%;
 }
 
-/* Correção específica da barra de urgência */
+/* BARRA DE URGÊNCIA */
 .grupo input[type="range"] { 
     padding: 0; 
     margin: 10px 0;
@@ -174,7 +174,7 @@ nav a:hover { color: #22c55e; }
     padding: 20px;
 }
 
-/* --- MEDIA QUERIES (MOBILE) --- */
+/* --- MOBILE --- */
 @media (max-width: 768px) {
     header { flex-direction: column; gap: 15px; text-align: center; }
     nav a { margin: 0 10px; }
