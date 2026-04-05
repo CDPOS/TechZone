@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | TechZone</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<header>
+    <h1>⚡ TechZone</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
+
+<main class="container-contato">
+    <section class="sessao-formulario">
+        <h2 class="titulo-contato">📩 Fale com a TechZone</h2>
+
+        <form class="formulario" action="#" method="POST">
+            <div class="grupo">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Ex: Ana Paula de Souza" required minlength="3">
+            </div>
+
+            <div class="grupo">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" required>
+                <small id="msgEmail"></small>
+            </div>
+
+            <div class="grupo">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(31) 99999-9999" pattern="\(\d{2}\)\s\d{5}-\d{4}">
+                <small id="msgTelefone"></small>
+            </div>
+
+            <div class="grupo">
+                <label for="nascimento">Data de Nascimento</label>
+                <input type="date" id="nascimento" name="nascimento" required>
+            </div>
+
+            <div class="grupo">
+                <label for="estado">Estado (UF)</label>
+                <select id="estado" name="estado" required>
+                    <option value="">Selecione...</option>
+                    <option value="AC">AC</option><option value="AL">AL</option><option value="AP">AP</option>
+                    <option value="AM">AM</option><option value="BA">BA</option><option value="CE">CE</option>
+                    <option value="DF">DF</option><option value="ES">ES</option><option value="GO">GO</option>
+                    <option value="MA">MA</option><option value="MT">MT</option><option value="MS">MS</option>
+                    <option value="MG">MG</option><option value="PA">PA</option><option value="PB">PB</option>
+                    <option value="PR">PR</option><option value="PE">PE</option><option value="PI">PI</option>
+                    <option value="RJ">RJ</option><option value="RN">RN</option><option value="RS">RS</option>
+                    <option value="RO">RO</option><option value="RR">RR</option><option value="SC">SC</option>
+                    <option value="SP">SP</option><option value="SE">SE</option><option value="TO">TO</option>
+                </select>
+            </div>
+
+            <div class="grupo">
+                <label for="produto">Produto de interesse</label>
+                <select id="produto" name="produto" required>
+                    <option value="">Selecione o produto...</option>
+                    <option>Processador</option>
+                    <option>Memória RAM</option>
+                    <option>Monitor</option>
+                    <option>Cadeira Gamer</option>
+                    <option>Teclado</option>
+                    <option>Mouse</option>
+                </select>
+            </div>
+
+            <div class="grupo">
+                <label for="urgencia">Urgência: <span id="valorUrgencia">3</span></label>
+                <input type="range" id="urgencia" name="urgencia" min="1" max="5" value="3">
+            </div>
+
+            <div class="grupo full">
+                <p>Preferência de contato:</p>
+                <label><input type="checkbox" name="pref_email"> Email</label>
+                <label><input type="checkbox" name="pref_tel"> Telefone</label>
+                <label><input type="checkbox" name="pref_whats"> WhatsApp</label>
+            </div>
+
+            <div class="grupo full">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como podemos te ajudar?"></textarea>
+            </div>
+
+            <button type="submit">Enviar Pedido</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 - TechZone - Todos os direitos reservados</p>
+</footer>
+
+<script>
+    const email = document.getElementById("email");
+    const telefone = document.getElementById("telefone");
+    const urgencia = document.getElementById("urgencia");
+    const valor = document.getElementById("valorUrgencia");
+
+    email.addEventListener("input", () => {
+        const msg = document.getElementById("msgEmail");
+        msg.textContent = email.validity.valid ? "✔ Email válido" : "❌ Email inválido";
+        msg.style.color = email.validity.valid ? "#22c55e" : "#ef4444";
+    });
+
+    telefone.addEventListener("input", () => {
+        const msg = document.getElementById("msgTelefone");
+        const regex = /^\(\d{2}\)\s\d{5}-\d{4}$/;
+        msg.textContent = regex.test(telefone.value) ? "✔ Número válido" : "❌ Formato: (XX) 99999-9999";
+        msg.style.color = regex.test(telefone.value) ? "#22c55e" : "#ef4444";
+    });
+
+    urgencia.addEventListener("input", () => { valor.textContent = urgencia.value; });
+</script>
+</body>
+</html>

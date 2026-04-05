@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificações | TechZone</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<header>
+    <h1>⚡ TechZone</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
+
+<main class="produto-detalhe">
+    <img id="imagem" src="" alt="Carregando produto...">
+
+    <div class="info-produto">
+        <h2 id="nome">Carregando...</h2>
+        <p id="descricao"></p>
+        <p class="preco" id="preco"></p>
+        
+        <p id="avaliacao">⭐⭐⭐⭐⭐ (Avaliação dos Clientes)</p>
+        <p id="compras" style="margin-bottom: 20px;">+500 unidades vendidas este mês</p>
+
+        <div class="acoes">
+            <button class="btn-comprar">Comprar Agora</button>
+            <a href="index.html" class="btn-voltar">⬅ Voltar ao início</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 - TechZone - Todos os direitos reservados</p>
+</footer>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const produtoChave = params.get("produto");
+
+    const nome = document.getElementById("nome");
+    const descricao = document.getElementById("descricao");
+    const preco = document.getElementById("preco");
+    const imagem = document.getElementById("imagem");
+
+    const dadosProdutos = {
+        ram: { 
+            nome: "Memória RAM Kingston Fury 8GB", 
+            desc: "DDR4 3200MHz Alta Performance para Games e Multitarefas.", 
+            preco: "R$ 199,90", 
+            img: "https://raw.githubusercontent.com/CDPOS/Trabalho/main/Memoria-RAM.webp" 
+        },
+        processador: { 
+            nome: "Processador AMD Ryzen 5 5500", 
+            desc: "6 Núcleos e 12 Threads. Desempenho excepcional para jogos modernos.", 
+            preco: "R$ 899,90", 
+            img: "https://raw.githubusercontent.com/CDPOS/Trabalho/main/51So7GoGvxL._AC_SX679_.jpg" 
+        },
+        monitor: { 
+            nome: "Monitor ASUS ROG 27\"", 
+            desc: "Painel IPS, 180Hz de taxa de atualização e 1ms de resposta.", 
+            preco: "R$ 2.199,90", 
+            img: "https://raw.githubusercontent.com/CDPOS/Trabalho/main/Monitor.webp" 
+        },
+        cadeira: { 
+            nome: "Cadeira Gamer Husky Storm", 
+            desc: "Design ergonômico com ajuste de altura e inclinação premium.", 
+            preco: "R$ 799,90", 
+            img: "https://raw.githubusercontent.com/CDPOS/Trabalho/main/Cadeira-Gamer.webp" 
+        },
+        teclado: { 
+            nome: "Teclado Gamer Redragon Kumara Pro", 
+            desc: "Mecânico, Switches de alta durabilidade e iluminação RGB customizável.", 
+            preco: "R$ 299,90", 
+            img: "https://raw.githubusercontent.com/CDPOS/Trabalho/main/Teclado-Gamer.webp" 
+        },
+        mouse: { 
+            nome: "Mouse Gamer Redragon Cobra", 
+            desc: "Sensor Pixart 3325, 10.000 DPI e botões programáveis via software.", 
+            preco: "R$ 149,90", 
+            img: "https://raw.githubusercontent.com/CDPOS/Trabalho/main/Mouse-Gamer.webp" 
+        }
+    };
+
+    if (produtoChave && dadosProdutos[produtoChave]) {
+        const item = dadosProdutos[produtoChave];
+        nome.textContent = item.nome;
+        descricao.textContent = item.desc;
+        preco.textContent = item.preco;
+        imagem.src = item.img;
+        imagem.alt = item.nome;
+    } else {
+        nome.textContent = "Produto não encontrado";
+        descricao.textContent = "Lamentamos, mas não conseguimos localizar este item.";
+        imagem.style.display = "none";
+    }
+</script>
+</body>
+</html>

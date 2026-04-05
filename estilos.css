@@ -1,0 +1,196 @@
+/* --- RESET E GERAL --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    font-family: 'Segoe UI', Arial, sans-serif; 
+    background-color: #020617; 
+    color: #e2e8f0; 
+    line-height: 1.6;
+}
+
+/* --- HEADER (Visual Original) --- */
+header { 
+    background-color: #020617; 
+    padding: 20px 5%; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+header h1 { color: #22c55e; font-size: 24px; }
+
+nav a { 
+    color: #fff; 
+    margin-left: 25px; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+nav a:hover { color: #22c55e; }
+
+/* --- BANNER (Verde Sólido 100%) --- */
+.banner { 
+    background-color: #16a34a; 
+    padding: 40px 20px; 
+    text-align: center; 
+    font-size: 20px; 
+    font-weight: bold; 
+    color: #fff; 
+    width: 100%;
+}
+
+/* --- TITULOS --- */
+.titulo-sessao, .titulo-contato {
+    padding: 40px 5% 20px;
+    font-size: 24px;
+    text-align: left;
+}
+
+/* --- GRID DE PRODUTOS --- */
+.container-produtos { 
+    padding: 0 5% 50px; 
+}
+
+.lista-produtos { 
+    list-style: none; 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 20px; 
+}
+
+/* --- CARD (Visual Original Ajustado) --- */
+.card { 
+    background-color: #0a0f1e; 
+    padding: 20px; 
+    border-radius: 8px; 
+    text-align: center; 
+    border: 1px solid #1e293b; 
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card img { 
+    width: 100%; 
+    height: 160px; 
+    object-fit: contain; 
+    margin-bottom: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.card h3 { font-size: 15px; margin-bottom: 10px; min-height: 40px; }
+
+.preco { color: #22c55e; font-size: 18px; font-weight: bold; margin-bottom: 15px; }
+
+/* --- BOTÕES --- */
+.btn-detalhes, .btn-comprar {
+    background-color: #22c55e;
+    color: #000;
+    padding: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 14px;
+    display: block;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-detalhes:hover, .btn-comprar:hover { background-color: #16a34a; }
+
+.btn-voltar {
+    background-color: #1e293b;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* --- FORMULÁRIO DE CONTATO (Correção da Barra e Botão) --- */
+.container-contato { padding: 40px 5%; }
+
+.formulario { 
+    background-color: #0a0f1e; 
+    padding: 30px; 
+    border-radius: 10px; 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 25px; 
+    max-width: 850px;
+    margin: auto;
+    border: 1px solid #1e293b;
+}
+
+.grupo { display: flex; flex-direction: column; width: 100%; }
+
+.grupo label { margin-bottom: 8px; font-weight: bold; font-size: 14px; }
+
+.grupo input, .grupo select, .grupo textarea { 
+    padding: 12px; 
+    background: #020617; 
+    border: 1px solid #1e293b; 
+    color: #fff; 
+    border-radius: 5px; 
+    width: 100%;
+}
+
+/* Correção específica da barra de urgência */
+.grupo input[type="range"] { 
+    padding: 0; 
+    margin: 10px 0;
+    width: 100%; 
+    accent-color: #22c55e;
+    cursor: pointer;
+}
+
+.full { grid-column: span 2; }
+
+/* --- PÁGINA DE ESPECIFICAÇÕES --- */
+.produto-detalhe { 
+    display: flex; 
+    gap: 50px; 
+    padding: 60px 5%; 
+    max-width: 1100px; 
+    margin: auto; 
+    align-items: flex-start;
+}
+
+.produto-detalhe img { 
+    width: 100%;
+    max-width: 450px; 
+    border-radius: 10px; 
+    background-color: #fff;
+    padding: 20px;
+}
+
+/* --- MEDIA QUERIES (MOBILE) --- */
+@media (max-width: 768px) {
+    header { flex-direction: column; gap: 15px; text-align: center; }
+    nav a { margin: 0 10px; }
+    
+    .formulario { grid-template-columns: 1fr; padding: 20px; }
+    .full { grid-column: span 1; }
+    
+    .produto-detalhe { flex-direction: column; text-align: center; align-items: center; }
+    .produto-detalhe img { max-width: 300px; }
+}
+
+/* FOOTER */
+footer {
+    text-align: left;
+    padding: 30px 5%;
+    font-size: 14px;
+    border-top: 1px solid #1e293b;
+    margin-top: 40px;
+}
