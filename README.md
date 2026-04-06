@@ -27,7 +27,7 @@ O projeto é composto por 4 páginas principais:
 2.  Certifique-se de manter a estrutura de pastas:
     * Raiz: Arquivos `.html` e `README.md`.
     * Pasta `/css`: Arquivo `estilos.css`.
-3.  Abra o arquivo `index.html` em qualquer navegador moderno (Chrome, Edge, Firefox).
+3.  Abra o arquivo `index.html` em qualquer navegador (Chrome, Edge, Firefox).
 
 ## 📊 Critérios de Entrega Atendidos
 * [x] Estrutura Semântica HTML5.
