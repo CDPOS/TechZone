@@ -30,6 +30,9 @@
     <h2 class="titulo-sessao">🔥 Ofertas em Tecnologia</h2>
 
     <div style="padding: 0 5% 20px; display: flex; gap: 10px;">
+        <input type="hidden" id="filtro-categoria" value="todos">
+        <input type="hidden" id="ordenar-preco" value="padrao">
+
         <button onclick="ordenarProdutos('crescente')" class="btn-detalhes" style="width: auto;">Menor Preço</button>
         <button onclick="ordenarProdutos('decrescente')" class="btn-detalhes" style="width: auto; background-color: #1e293b; color: white;">Maior Preço</button>
     </div>
