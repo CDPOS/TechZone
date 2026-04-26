@@ -75,4 +75,4 @@ Desenvolvido por: Cauã Douglas Pereira de Oliveira Santos
 
 Área: Ciências da Computação
 
-Data: Abril de 2026.****
+Data: Abril de 2026.
