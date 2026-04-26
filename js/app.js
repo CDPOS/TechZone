@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. BANCO DE DADOS DE PRODUTOS
-   ========================================================================== */
+/* 1. BANCO DE DADOS DE PRODUTOS */
 const dadosProdutos = [
     { id: 'ram', nome: "Memória RAM Kingston Fury 8GB", preco: 199.90, img: "img/Memoria-RAM.webp", categoria: "hardware", desc: "DDR4 3200MHz Alta Performance para Games e Multitasking." },
     { id: 'processador', nome: "Processador AMD Ryzen 5 5500", preco: 899.90, img: "img/Processador.webp", categoria: "hardware", desc: "6 Núcleos e 12 Threads. Desempenho excepcional para jogos modernos." },
