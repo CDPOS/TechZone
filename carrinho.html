@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Carrinho | TechZone</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <h1>⚡ TechZone</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="contato.html">Contato</a>
+            <a href="carrinho.html" class="nav-carrinho">
+                🛒 Carrinho 
+                <span id="contagem-carrinho" style="background: #ef4444; color: white; border-radius: 50%; padding: 2px 7px; font-size: 11px; margin-left: 5px; display: none;">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="container-produtos">
+        <h2 class="titulo-sessao">🛒 Itens no seu Carrinho</h2>
+        
+        <ul id="lista-carrinho"></ul>
+
+        <div class="total-secao">
+            <h3 id="total-carrinho">Total: R$ 0,00</h3>
+            <div class="acoes-carrinho">
+                <button onclick="limparCarrinho()" class="btn-esvaziar">Esvaziar Carrinho</button>
+                <button class="btn-comprar">Finalizar Compra</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 - TechZone - Cauã Santos</p>
+        <p>Dúvidas? <a href="mailto:contato@techzone.com" style="color: #22c55e;">contato@techzone.com</a></p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
