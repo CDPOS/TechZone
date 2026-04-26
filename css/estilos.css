@@ -292,20 +292,49 @@ input[type="range"]::-moz-range-thumb {
 
 /* 9. RESPONSIVIDADE MOBILE */
 @media (max-width: 768px) {
-    header { flex-direction: column; gap: 15px; text-align: center; }
-    nav { flex-wrap: wrap; justify-content: center; }
-    nav a { margin: 5px 10px; }
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 2%;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center; 
+        gap: 10px; 
+    }
+
+    nav a {
+        margin: 0; 
+        font-size: 13px; 
+    }
+
+    
+    .nav-carrinho {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    #contagem-carrinho {
+        margin-left: 4px;
+        padding: 1px 5px;
+    }
+
     
     .formulario { grid-template-columns: 1fr; padding: 20px; }
     .full { grid-column: span 1; }
     
     .produto-detalhe { flex-direction: column; text-align: center; align-items: center; }
-    .produto-detalhe img { max-width: 300px; }
+    .produto-detalhe img { max-width: 250px; }
 
     .item-carrinho-lista { flex-direction: column; gap: 15px; text-align: center; }
     .controles-item { width: 100%; justify-content: space-between; }
     .acoes-carrinho { flex-direction: column; align-items: stretch; }
-    .btn-esvaziar, .total-secao .btn-comprar { width: 100%; text-align: center; }
 }
 
 /* 10. FOOTER */
