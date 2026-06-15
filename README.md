@@ -83,11 +83,6 @@ $password = '';     // Senha padrão vazia no XAMPP
 - /views: Páginas administrativas e interfaces (painel_pedidos.php, editar_form.php)
 - /css & /js: Arquivos centrais de estilização e inteligência front-end
 
-## 📊 Critérios de Avaliação Atendidos (Etapa 3 - 25% da Nota Final)
-- [x] Funcionalidade Completa do CRUD (15%): Fluxo total operando sem quebras para as quatro operações fundamentais.
-- [x] Modelagem e Integração com o Banco de Dados (5%): Uso correto de chaves primárias autoincrementais, integridade de tipos e segurança com PDO.
-- [x] Clareza de Instalação no README (5%): Documentação técnica guiada passo a passo com mapeamento de arquivos e credenciais locais explicitadas.
-
 ---
 **Desenvolvido por:** Cauã Douglas Pereira de Oliveira Santos  
 🆔 **Matrícula:** 202508185148  
