@@ -1,7 +1,5 @@
 # ⚡ TechZone - Hardware & Periféricos Gamer
 
-🚀 Repositório GitHub: [https://github.com/CDPOS/TechZone]
-
 Este projeto é uma plataforma de e-commerce completa e responsiva, focada em componentes de alta performance e periféricos gamer. Originalmente desenvolvido no ecossistema de front-end, o sistema foi evoluído na **Etapa 3** com uma arquitetura back-end robusta em **PHP** integrada a um banco de dados **MySQL**, implementando um ciclo de vida **CRUD completo** para gerenciamento de pedidos.
 
 ## 🎯 Público-Alvo
